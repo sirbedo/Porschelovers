@@ -1,0 +1,216 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.7;
+}
+
+/* Header */
+header {
+    position: relative;
+    background-image: url('images/header-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 350px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.6); 
+    padding: 0.5em 1em;
+    border-radius: 8px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #d3d3d3;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #c70000; 
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.5em;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #ffdd00; 
+    transform: scale(1.1);
+}
+
+/* Main Content */
+main {
+    padding: 2em 3em;
+    background-color: #fff;
+    color: #333;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.intro, .founder-info {
+    margin-bottom: 2em;
+}
+
+.intro h2, .founder-info h2 {
+    font-size: 2em;
+    color: #c70000; 
+    border-bottom: 3px solid #ffdd00; 
+    padding-bottom: 0.3em;
+    margin-bottom: 0.5em;
+}
+
+/* Founder Section */
+.founder-details {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+.founder-image {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid #c70000;
+}
+
+.founder-info p {
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+    font-size: 0.9em;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 2em;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Lightbox Effect Using :target */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    background: black;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Links Section */
+.links-section {
+    margin-bottom: 2em;
+    padding: 1em 0;
+}
+
+.links-section h2 {
+    font-size: 2em;
+    color: #c70000; 
+    border-bottom: 3px solid #ffdd00; 
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
+}
+
+.link-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin: 0.8em 0;
+}
+
+.link-list a {
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.link-list a:hover {
+    color: #ffdd00; 
+    border-bottom: 2px solid #c70000; 
+}
